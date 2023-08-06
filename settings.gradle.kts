@@ -1,0 +1,1 @@
+rootProject.name = "com.one_piece_story_base.one_piece_server"
