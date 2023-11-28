@@ -9,7 +9,7 @@ object ShipTable: Table(name = "ship") {
     val mangaId = integer("manga_id").references(MangaTable.id)
     val nameShip = varchar("name_ship", 50).nullable()
     val description = text("description").nullable()
-    val oldShip = bool("old_ship")
+    val oldShip = integer("old_ship").nullable()
     val nameJp = varchar("name_jp", 50).nullable()
     val transcriptionJp = varchar("transcription_jp_name", 50).nullable()
     val image = text("image").nullable()
@@ -21,7 +21,7 @@ data class ShipDTO(
     val mangaId: Int,
     val nameShip: String?,
     val description: String?,
-    val oldShip: Boolean,
+    val oldShip: Int?,
     val nameJp: String?,
     val transcriptionJp: String?,
     val image: String?,

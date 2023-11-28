@@ -29,7 +29,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -54,7 +54,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -75,7 +75,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                 )
 
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             null
         }
     }
@@ -116,7 +116,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -139,7 +139,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -164,7 +164,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -192,7 +192,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -217,7 +217,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -243,7 +243,7 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -264,11 +264,12 @@ class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
                             mangaId = weapon[PersonageWeaponsTable.mangaId],
                             nameWeapons = weapon[PersonageWeaponsTable.nameWeapons],
                             description = weapon[PersonageWeaponsTable.description],
-                            oldWeapon = weapon[PersonageWeaponsTable.oldWeapon]
+                            oldWeapon = weapon[PersonageWeaponsTable.oldWeapon],
+                            personageDescriptionId = weapon[PersonageWeaponsTable.personageDescriptionId]
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }

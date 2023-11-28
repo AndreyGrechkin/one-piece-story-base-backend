@@ -10,6 +10,7 @@ object PersonageRewardTable: Table(name = "personage_reward") {
     val reward = integer("reward")
     val rewardType = varchar("type_reward", 50)
     val image = text("image").nullable()
+    val placeId = integer("place_id").references(PlaceTable.id)
 }
 
 data class PersonageRewardDTO(
@@ -19,6 +20,7 @@ data class PersonageRewardDTO(
     val reward: Int,
     val rewardType: String,
     val image: String?,
+    val placeId: Int
 )
 
 fun PersonageRewardDTO.toResponse() = PersonageRewardResponse(
@@ -27,5 +29,6 @@ fun PersonageRewardDTO.toResponse() = PersonageRewardResponse(
     mangaId = mangaId,
     reward = reward,
     rewardType = rewardType,
-    image = image
+    image = image,
+    placeId = placeId
 )

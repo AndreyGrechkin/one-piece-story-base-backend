@@ -3,7 +3,6 @@ package com.one_piece_story_base.data.local
 import com.one_piece_story_base.BaseUrl
 import com.one_piece_story_base.data.model.InventoryDTO
 import com.one_piece_story_base.data.model.InventoryTable
-import com.one_piece_story_base.data.model.PlaceDescriptionTable
 import com.one_piece_story_base.domain.local.InventoryLocalDataSource
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.select

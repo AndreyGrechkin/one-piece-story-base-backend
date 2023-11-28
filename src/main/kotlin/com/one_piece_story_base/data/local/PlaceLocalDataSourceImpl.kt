@@ -3,8 +3,6 @@ package com.one_piece_story_base.data.local
 import com.one_piece_story_base.BaseUrl
 import com.one_piece_story_base.data.model.*
 import com.one_piece_story_base.domain.local.PlaceLocalDataSource
-import io.ktor.network.sockets.*
-import io.ktor.server.http.content.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.selectAll
@@ -32,7 +30,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -54,7 +52,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -76,7 +74,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -99,7 +97,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                     timeStep = place[PlaceTable.timeStep]
                 )
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             null
         }
     }
@@ -122,7 +120,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -145,7 +143,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }
@@ -167,7 +165,7 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                         )
                     }
             }
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
             emptyList()
         }
     }

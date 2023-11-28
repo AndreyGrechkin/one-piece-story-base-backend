@@ -1,6 +1,5 @@
 package com.one_piece_story_base.routing
 
-import com.one_piece_story_base.routing.repository.BondController
 import com.one_piece_story_base.routing.repository.FruitController
 import io.ktor.http.*
 import io.ktor.server.application.*

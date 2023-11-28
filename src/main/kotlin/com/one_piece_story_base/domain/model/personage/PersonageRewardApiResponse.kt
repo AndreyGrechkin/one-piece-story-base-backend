@@ -15,6 +15,7 @@ data class PersonageRewardResponse(
     val reward: Int,
     val rewardType: String,
     val image: String?,
+    val placeId: Int
 )
 
 

@@ -14,5 +14,6 @@ data class PersonageWeaponsResponse(
     val mangaId: Int,
     val nameWeapons: String?,
     val description: String?,
-    val oldWeapon: Boolean
+    val oldWeapon: Boolean,
+    val personageDescriptionId: Int?
 )

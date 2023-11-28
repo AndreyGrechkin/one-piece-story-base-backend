@@ -27,6 +27,8 @@ val appModule = module {
     single<FruitController> { FruitControllerImpl(get()) }
     single<ShipLocalDataSource> { ShipLocalDataSourceImpl() }
     single<ShipController> { ShipControllerImpl(get()) }
+    single<IslandLocalDataSource> { IslandLocalDataSourceImpl() }
+    single<IslandController> {IslandControllerImpl(get()) }
     single<PlaceLocalDataSource> { PlaceLocalDataSourceImpl() }
     single<PlaceController> {
         PlaceControllerImpl(

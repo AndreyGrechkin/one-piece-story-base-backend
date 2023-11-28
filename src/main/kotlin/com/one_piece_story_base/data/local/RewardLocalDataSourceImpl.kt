@@ -23,7 +23,8 @@ class RewardLocalDataSourceImpl : RewardLocalDataSource {
                             mangaId = reward[PersonageRewardTable.mangaId],
                             reward = reward[PersonageRewardTable.reward],
                             rewardType = reward[PersonageRewardTable.rewardType],
-                            image = if (reward[PersonageRewardTable.image] != null) BaseUrl + "static/reward/${reward[PersonageRewardTable.image]}" else null
+                            image = if (reward[PersonageRewardTable.image] != null) BaseUrl + "static/reward/${reward[PersonageRewardTable.image]}" else null,
+                            placeId = reward[PersonageRewardTable.placeId]
                         )
                     }
             }
@@ -48,7 +49,8 @@ class RewardLocalDataSourceImpl : RewardLocalDataSource {
                             mangaId = reward[PersonageRewardTable.mangaId],
                             reward = reward[PersonageRewardTable.reward],
                             rewardType = reward[PersonageRewardTable.rewardType],
-                            image = if (reward[PersonageRewardTable.image] != null) BaseUrl + "static/reward/${reward[PersonageRewardTable.image]}" else null
+                            image = if (reward[PersonageRewardTable.image] != null) BaseUrl + "static/reward/${reward[PersonageRewardTable.image]}" else null,
+                            placeId = reward[PersonageRewardTable.placeId]
                         )
                     }
             }
@@ -68,7 +70,8 @@ class RewardLocalDataSourceImpl : RewardLocalDataSource {
                     mangaId = reward[PersonageRewardTable.mangaId],
                     reward = reward[PersonageRewardTable.reward],
                     rewardType = reward[PersonageRewardTable.rewardType],
-                    image = if (reward[PersonageRewardTable.image] != null) BaseUrl + "static/reward/${reward[PersonageRewardTable.image]}" else null
+                    image = if (reward[PersonageRewardTable.image] != null) BaseUrl + "static/reward/${reward[PersonageRewardTable.image]}" else null,
+                    placeId = reward[PersonageRewardTable.placeId]
                 )
             }
         } catch (e: Exception) {
