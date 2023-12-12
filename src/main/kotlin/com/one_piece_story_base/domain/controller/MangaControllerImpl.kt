@@ -7,8 +7,8 @@ import com.one_piece_story_base.routing.repository.MangaController
 
 
 class MangaControllerImpl(
-    private val dao: MangaLocalDataSource
-): MangaController {
+    private val dao: MangaLocalDataSource,
+) : MangaController {
 
     override suspend fun getMangaAll(): MangaApiResponse {
         val daoManga = dao.fetchManga()
@@ -17,7 +17,7 @@ class MangaControllerImpl(
     }
 
     override suspend fun getMangaByPlace(placeId: Int): MangaApiResponse {
-       val daoManga = dao.fetchMangaByPlaceId(placeId).map { it.toResponse() }
+        val daoManga = dao.fetchMangaByPlaceId(placeId).map { it.toResponse() }
         return MangaApiResponse(manges = daoManga)
     }
 }

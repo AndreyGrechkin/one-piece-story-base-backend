@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.place.PlaceItemResponse
 import org.jetbrains.exposed.sql.Table
 
-object PlaceItemTable: Table(name = "place_item") {
+object PlaceItemTable : Table(name = "place_item") {
     val id = integer("id")
     val placeId = integer("place_id").references(PlaceTable.id)
     val nameItem = varchar("name_item", 50).nullable()
@@ -11,6 +11,8 @@ object PlaceItemTable: Table(name = "place_item") {
     val transcriptionJp = varchar("transcription_name", 50).nullable()
     val description = text("description").nullable()
     val image = text("image").nullable()
+    val posX = double("x_position")
+    val posY = double("y_position")
 }
 
 data class PlaceItemDTO(
@@ -21,6 +23,8 @@ data class PlaceItemDTO(
     val transcriptionJp: String?,
     val description: String?,
     val image: String?,
+    val posX: Double,
+    val posY: Double,
 )
 
 fun PlaceItemDTO.toResponse() = PlaceItemResponse(
@@ -30,5 +34,7 @@ fun PlaceItemDTO.toResponse() = PlaceItemResponse(
     nameJp = nameJp,
     transcriptionJp = transcriptionJp,
     description = description,
-    image = image
+    image = image,
+    posX = posX,
+    posY = posY
 )

@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ShipApiResponse(
-    val response: List<ShipResponse>
+    val response: List<ShipResponse>,
 )
 
 @Serializable

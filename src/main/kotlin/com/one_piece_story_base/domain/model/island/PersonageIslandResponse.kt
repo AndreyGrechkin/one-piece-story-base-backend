@@ -4,11 +4,11 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class PersonageIslandResponse(
-    val response: List<PersonageIslandResponseBody>
+    val response: List<PersonageIslandResponseBody>,
 )
 
 @Serializable
-data class PersonageIslandResponseBody (
+data class PersonageIslandResponseBody(
     val id: Int,
     val placeId: Int,
     val nameAvatar: String,

@@ -1,7 +1,9 @@
 package com.one_piece_story_base.data.local
 
 import com.one_piece_story_base.BaseUrl
-import com.one_piece_story_base.data.model.*
+import com.one_piece_story_base.data.model.MangaTable
+import com.one_piece_story_base.data.model.PersonageRewardDTO
+import com.one_piece_story_base.data.model.PersonageRewardTable
 import com.one_piece_story_base.domain.local.RewardLocalDataSource
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.and

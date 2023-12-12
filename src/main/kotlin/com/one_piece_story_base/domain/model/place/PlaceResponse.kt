@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class PlaceApiResponse(
-    val response: List<PlaceResponse>
+    val response: List<PlaceResponse>,
 )
 
 @Serializable
@@ -19,13 +19,14 @@ data class PlaceResponse(
     val nameIsland: String?,
     val nameJp: String?,
     val transcriptionJp: String?,
-    val timeStep: Long
+    val timeStep: Long,
+    val placeDetailImage: String?,
 )
 
 
 @Serializable
 data class PlaceMangaApiResponse(
-    val response: List<PlaceMangaResponse>
+    val response: List<PlaceMangaResponse>,
 )
 
 @Serializable
@@ -39,12 +40,15 @@ data class PlaceMangaResponse(
     val nameIsland: String?,
     val nameJp: String?,
     val transcriptionJp: String?,
-    val timeStep: Long
+    val timeStep: Long,
+    val placeDetailImage: String?,
 )
+
 @Serializable
 data class PlaceDescriptionApiResponse(
-    val response: List<PlaceDescriptionResponse>
+    val response: List<PlaceDescriptionResponse>,
 )
+
 @Serializable
 data class PlaceDescriptionResponse(
     val id: Int,

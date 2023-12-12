@@ -8,10 +8,10 @@ import com.one_piece_story_base.domain.model.island.PersonageIslandResponse
 import com.one_piece_story_base.routing.repository.IslandController
 
 class IslandControllerImpl(
-    private val dao: IslandLocalDataSource
-):IslandController {
+    private val dao: IslandLocalDataSource,
+) : IslandController {
     override suspend fun getIsland(): IslandApiResponse {
-        val  daoIsland = dao.fetchIsland()
+        val daoIsland = dao.fetchIsland()
         return IslandApiResponse(response = daoIsland.map { it.toResponse() })
     }
 
@@ -21,7 +21,7 @@ class IslandControllerImpl(
     }
 
     override suspend fun getIslandTransit(placeId: Int): IslandTransitResponse {
-       val daoTransit = dao.fetchIslandTransit(placeId)
+        val daoTransit = dao.fetchIslandTransit(placeId)
         return IslandTransitResponse(response = daoTransit.map { it.toResponse() })
     }
 }

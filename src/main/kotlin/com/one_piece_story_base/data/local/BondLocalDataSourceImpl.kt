@@ -9,13 +9,15 @@ import org.jetbrains.exposed.sql.and
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.transactions.transaction
 
-class BondLocalDataSourceImpl: BondLocalDataSource {
+class BondLocalDataSourceImpl : BondLocalDataSource {
     override fun fetchBondByPlace(placeId: Int): List<BondDTO> {
         return try {
             transaction {
                 BondTable.innerJoin(MangaTable)
-                    .select(where = BondTable.mangaId.eq(MangaTable.id)
-                    and MangaTable.placeId.eq(placeId))
+                    .select(
+                        where = BondTable.mangaId.eq(MangaTable.id)
+                                and MangaTable.placeId.eq(placeId)
+                    )
                     .toList()
                     .map { bond ->
                         BondDTO(
@@ -28,7 +30,7 @@ class BondLocalDataSourceImpl: BondLocalDataSource {
                         )
                     }
             }
-        }catch (e: Exception){
+        } catch (e: Exception) {
             emptyList()
         }
     }

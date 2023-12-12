@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class BandDescriptionApiResponse(
-    val response : List<BandDescriptionResponse>
+    val response: List<BandDescriptionResponse>,
 )
 
 @Serializable

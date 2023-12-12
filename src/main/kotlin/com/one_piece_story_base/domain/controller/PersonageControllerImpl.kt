@@ -8,7 +8,7 @@ import com.one_piece_story_base.routing.repository.PersonageController
 
 class PersonageControllerImpl(
     private val dao: PersonageLocalDataSource,
-    private val band: BandLocalDataSource
+    private val band: BandLocalDataSource,
 ) : PersonageController {
     override suspend fun getPersonage(): PersonageApiResponse {
         val daoPersonage = dao.fetchPersonage()
@@ -89,7 +89,7 @@ class PersonageControllerImpl(
     }
 
     override suspend fun getWeaponByPlaceId(placeId: Int): PersonageWeaponsApiResponse {
-       val  weapon = dao.fetchWeaponByPlaceId(placeId).map { it.toResponse() }
+        val weapon = dao.fetchWeaponByPlaceId(placeId).map { it.toResponse() }
         return PersonageWeaponsApiResponse(response = weapon)
     }
 }

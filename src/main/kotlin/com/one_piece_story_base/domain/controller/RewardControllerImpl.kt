@@ -7,7 +7,7 @@ import com.one_piece_story_base.domain.model.personage.PersonageRewardResponse
 import com.one_piece_story_base.routing.repository.RewardController
 
 class RewardControllerImpl(
-    private val dao: RewardLocalDataSource
+    private val dao: RewardLocalDataSource,
 ) : RewardController {
     override suspend fun getAllReward(): PersonageRewardApiResponse {
         return PersonageRewardApiResponse(dao.fetchReward().map { it.toResponse() })

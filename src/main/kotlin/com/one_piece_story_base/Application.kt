@@ -2,11 +2,13 @@ package com.one_piece_story_base
 
 import com.one_piece_story_base.database.DatabaseFactory
 import com.one_piece_story_base.di.appModule
+import com.one_piece_story_base.plugins.configureMonitoring
+import com.one_piece_story_base.plugins.configureRouting
+import com.one_piece_story_base.plugins.configureSerialization
+import com.one_piece_story_base.routing.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import com.one_piece_story_base.plugins.*
-import com.one_piece_story_base.routing.*
 import org.koin.ktor.ext.inject
 import org.koin.ktor.plugin.Koin
 import org.koin.logger.slf4jLogger
@@ -26,7 +28,7 @@ fun Application.module() {
     databaseFactory.connect()
     configureSerialization()
     configureMonitoring()
- //   configureSecurity()
+    //   configureSecurity()
     configureRouting()
     configureMangaRouting()
     configurePlaceRouting()

@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class PlaceItemApiResponse(
-    val response: List<PlaceItemResponse>
+    val response: List<PlaceItemResponse>,
 )
 
 @Serializable
@@ -16,4 +16,6 @@ data class PlaceItemResponse(
     val transcriptionJp: String?,
     val description: String?,
     val image: String?,
+    val posX: Double,
+    val posY: Double,
 )

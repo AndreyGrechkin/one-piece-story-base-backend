@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.personage.PersonageSkillResponse
 import org.jetbrains.exposed.sql.Table
 
-object PersonageSkillTable: Table(name = "personage_skill") {
+object PersonageSkillTable : Table(name = "personage_skill") {
     val id = integer("id")
     val personageId = integer("personage_id").references(PersonageTable.id)
     val mangaId = integer("manga_id").references(MangaTable.id)

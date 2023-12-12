@@ -20,7 +20,7 @@ data class MangaDTO(
     val animeType: String?,
     val animeSeries: String?,
     val description: String?,
-    val  placeId: Int
+    val placeId: Int,
 )
 
 fun MangaDTO.toResponse() = MangaResponse(

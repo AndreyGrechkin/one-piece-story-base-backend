@@ -3,8 +3,8 @@ package com.one_piece_story_base.domain.model.place
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class  PlaceTransitItemApiResponse(
-    val response: List<PlaceTransitItemResponse>
+data class PlaceTransitItemApiResponse(
+    val response: List<PlaceTransitItemResponse>,
 )
 
 @Serializable
@@ -13,6 +13,6 @@ data class PlaceTransitItemResponse(
     val mangaId: Int,
     val placeId: Int,
     val personageId: Int,
-    val outItemId: Int?,
-    val inItemId: Int?
+    val outItemId: Int,
+    val inItemId: Int,
 )

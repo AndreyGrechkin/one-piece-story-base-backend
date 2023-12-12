@@ -5,7 +5,7 @@ import com.one_piece_story_base.domain.model.band.BandDescriptionApiResponse
 import com.one_piece_story_base.domain.model.band.BandPersonageApiResponse
 
 interface BandController {
-    suspend fun getBandByPlace(placeId: Int) : BandApiResponse
-    suspend fun getBandDescriptionByPlace(placeId: Int) : BandDescriptionApiResponse
-    suspend fun getBandPersonageByPlace(placeId: Int) : BandPersonageApiResponse
+    suspend fun getBandByPlace(placeId: Int): BandApiResponse
+    suspend fun getBandDescriptionByPlace(placeId: Int): BandDescriptionApiResponse
+    suspend fun getBandPersonageByPlace(placeId: Int): BandPersonageApiResponse
 }

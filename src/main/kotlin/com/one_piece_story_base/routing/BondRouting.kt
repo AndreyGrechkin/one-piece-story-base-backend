@@ -10,7 +10,7 @@ import org.koin.ktor.ext.inject
 fun Application.configureBondRouting() {
     val bond by inject<BondController>()
     routing {
-        get("/bond/place"){
+        get("/bond/place") {
             val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")

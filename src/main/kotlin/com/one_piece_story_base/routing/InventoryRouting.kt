@@ -9,7 +9,6 @@ import org.koin.ktor.ext.inject
 
 fun Application.configureInventoryRouting() {
     val inventory by inject<InventoryController>()
-
     routing {
         get("/inventory") {
             call.respond(status = HttpStatusCode.OK, inventory.getAllInventory())

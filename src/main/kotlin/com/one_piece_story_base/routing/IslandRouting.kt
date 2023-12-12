@@ -9,13 +9,12 @@ import org.koin.ktor.ext.inject
 
 fun Application.configureIslandRouting() {
     val island by inject<IslandController>()
-
     routing {
-        get ("/islands") {
+        get("/islands") {
             call.respond(status = HttpStatusCode.OK, island.getIsland())
         }
 
-        get ("/islands/personage") {
+        get("/islands/personage") {
             val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
@@ -26,7 +25,7 @@ fun Application.configureIslandRouting() {
                 call.respond(status = HttpStatusCode.OK, coordinateIsland)
         }
 
-        get ("/islands/transit") {
+        get("/islands/transit") {
             val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")

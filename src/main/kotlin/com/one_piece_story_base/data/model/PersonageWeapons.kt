@@ -1,7 +1,5 @@
 package com.one_piece_story_base.data.model
 
-import com.one_piece_story_base.data.model.PersonageSkillTable.nullable
-import com.one_piece_story_base.data.model.PersonageSkillTable.references
 import com.one_piece_story_base.domain.model.personage.PersonageWeaponsResponse
 import org.jetbrains.exposed.sql.Table
 
@@ -22,7 +20,7 @@ data class PersonageWeaponsDTO(
     val nameWeapons: String?,
     val description: String?,
     val oldWeapon: Boolean,
-    val personageDescriptionId: Int?
+    val personageDescriptionId: Int?,
 )
 
 fun PersonageWeaponsDTO.toResponse() = PersonageWeaponsResponse(

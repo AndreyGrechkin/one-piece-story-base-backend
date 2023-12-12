@@ -9,7 +9,6 @@ import org.koin.ktor.ext.inject
 
 fun Application.configureBandRouting() {
     val band by inject<BandController>()
-
     routing {
         get("/band/place") {
             val id = call.request.queryParameters["placeId"]

@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.ship.ShipResponse
 import org.jetbrains.exposed.sql.Table
 
-object ShipTable: Table(name = "ship") {
+object ShipTable : Table(name = "ship") {
     val id = integer("id")
     val bandId = integer("band_id").references(BandTable.id)
     val mangaId = integer("manga_id").references(MangaTable.id)
@@ -27,7 +27,7 @@ data class ShipDTO(
     val image: String?,
 )
 
-fun  ShipDTO.toResponse() = ShipResponse(
+fun ShipDTO.toResponse() = ShipResponse(
     id = id,
     bandId = bandId,
     mangaId = mangaId,

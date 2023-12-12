@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.band.BandPersonageResponse
 import org.jetbrains.exposed.sql.Table
 
-object BandPersonageTable: Table(name = "band_personage") {
+object BandPersonageTable : Table(name = "band_personage") {
     val id = integer("id")
     val personageId = integer("personage_id").references(PersonageTable.id)
     val bandId = integer("band_id").references(BandTable.id)
@@ -18,7 +18,7 @@ data class BandPersonageDTO(
     val bandId: Int,
     val mangaId: Int,
     val career: String?,
-    val oldPersonage: Boolean
+    val oldPersonage: Boolean,
 )
 
 fun BandPersonageDTO.toResponse() = BandPersonageResponse(

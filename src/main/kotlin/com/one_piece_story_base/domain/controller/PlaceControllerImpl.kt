@@ -15,7 +15,7 @@ class PlaceControllerImpl(
     private val bond: BondLocalDataSource,
     private val ship: ShipLocalDataSource,
     private val fruit: FruitLocalDataSource,
-    private val reward: RewardLocalDataSource
+    private val reward: RewardLocalDataSource,
 ) : PlaceController {
     override suspend fun getAllPlace(): PlaceApiResponse {
         val daoPlace = dao.fetchPlace()
@@ -66,6 +66,7 @@ class PlaceControllerImpl(
                 personages = personage,
                 inventory = inventory,
                 itemMap = item,
+                placeDetailImage = place.placeDetailImage
             )
         }
         return MapPlaceListApiResponse(response = mapPlaceList)
@@ -102,6 +103,7 @@ class PlaceControllerImpl(
                 nameJp = daoPlace.nameJp,
                 transcriptionJp = daoPlace.transcriptionJp,
                 timeStep = daoPlace.timeStep,
+                placeDetailImage = daoPlace.placeDetailImage,
                 band = daoBand,
                 bandDescription = daoBandDescription,
                 bandPersonage = daoBandPersonage,

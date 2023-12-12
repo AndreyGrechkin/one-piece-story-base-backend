@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.band.BandResponse
 import org.jetbrains.exposed.sql.Table
 
-object BandTable: Table(name = "band") {
+object BandTable : Table(name = "band") {
     val id = integer("id")
     val mangaId = integer("manga_id").references(MangaTable.id)
     val nameBand = varchar("name_band", 50)

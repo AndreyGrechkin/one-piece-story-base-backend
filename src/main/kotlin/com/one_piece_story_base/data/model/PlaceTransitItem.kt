@@ -8,8 +8,8 @@ object PlaceTransitItemTable : Table(name = "place_transit_item") {
     val mangaId = integer("manga_id").references(MangaTable.id)
     val placeId = integer("place_id").references(PlaceTable.id)
     val personageId = integer("personage_id").references(PersonageTable.id)
-    val outItemId = integer("out_item_id").references(PlaceItemTable.id).nullable()
-    val inItemId = integer("in_item_id").references(PlaceItemTable.id).nullable()
+    val outItemId = integer("out_item_id").references(PlaceItemTable.id)
+    val inItemId = integer("in_item_id").references(PlaceItemTable.id)
 }
 
 data class PlaceTransitItemDTO(
@@ -17,8 +17,8 @@ data class PlaceTransitItemDTO(
     val mangaId: Int,
     val placeId: Int,
     val personageId: Int,
-    val outItemId: Int?,
-    val inItemId: Int?
+    val outItemId: Int,
+    val inItemId: Int,
 )
 
 fun PlaceTransitItemDTO.toResponse() = PlaceTransitItemResponse(

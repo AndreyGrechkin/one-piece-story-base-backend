@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class BondApiResponse(
-    val response: List<BondResponse>
+    val response: List<BondResponse>,
 )
 
 @Serializable
@@ -14,5 +14,5 @@ data class BondResponse(
     val mangaId: Int,
     val bondPersonageId: Int,
     val description: String?,
-    val bondType: String?
+    val bondType: String?,
 )

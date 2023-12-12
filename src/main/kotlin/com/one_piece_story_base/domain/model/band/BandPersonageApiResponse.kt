@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class BandPersonageApiResponse(
-    val response: List<BandPersonageResponse>
+    val response: List<BandPersonageResponse>,
 )
 
 @Serializable
@@ -14,5 +14,5 @@ data class BandPersonageResponse(
     val bandId: Int,
     val mangaId: Int,
     val career: String?,
-    val oldPersonage: Boolean
+    val oldPersonage: Boolean,
 )

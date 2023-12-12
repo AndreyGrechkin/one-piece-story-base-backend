@@ -9,7 +9,6 @@ import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
 
-
 class PersonageLocalDataSourceImpl : PersonageLocalDataSource {
     override fun fetchPersonage(): List<PersonageDTO> {
         return try {

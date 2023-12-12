@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.inventory.InventoryResponse
 import org.jetbrains.exposed.sql.Table
 
-object InventoryTable: Table(name = "inventory") {
+object InventoryTable : Table(name = "inventory") {
     val id = integer("id")
     val mangaId = integer("manga_id").references(MangaTable.id)
     val placeId = integer("place_id").references(PlaceTable.id)

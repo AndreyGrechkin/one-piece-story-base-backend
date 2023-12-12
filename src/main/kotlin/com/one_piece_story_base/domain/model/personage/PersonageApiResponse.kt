@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class PersonageApiResponse(
-    val response: List<PersonageResponse>
+    val response: List<PersonageResponse>,
 )
 
 @Serializable
@@ -15,5 +15,5 @@ data class PersonageResponse(
     val name: String,
     val nameJp: String?,
     val transcriptionJp: String?,
-    val avatar: String?
+    val avatar: String?,
 )

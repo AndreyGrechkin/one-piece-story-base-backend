@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.island.IslandResponse
 import org.jetbrains.exposed.sql.Table
 
-object IslandTable: Table(name= "island") {
+object IslandTable : Table(name = "island") {
     val id = integer("id")
     val name = varchar("name_island", 50).nullable()
     val nameImage = varchar("name_image", 50)
@@ -18,7 +18,7 @@ data class IslandDTO(
     val nameImage: String,
     val posX: Double,
     val posY: Double,
-    val placeId: Int?
+    val placeId: Int?,
 )
 
 fun IslandDTO.toResponse() = IslandResponse(

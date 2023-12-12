@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.place.PlaceDescriptionResponse
 import org.jetbrains.exposed.sql.Table
 
-object PlaceDescriptionTable: Table(name = "place_description"){
+object PlaceDescriptionTable : Table(name = "place_description") {
     val id = integer("id")
     val placeId = integer("place_id").references(PlaceTable.id)
     val mangaId = integer("manga_id").references(MangaTable.id)

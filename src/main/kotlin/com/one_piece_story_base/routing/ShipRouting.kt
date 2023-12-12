@@ -8,9 +8,7 @@ import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
 fun Application.configureShipRouting() {
-
     val ship by inject<ShipController>()
-
     routing {
         get("/ship/place") {
             val id = call.request.queryParameters["placeId"]

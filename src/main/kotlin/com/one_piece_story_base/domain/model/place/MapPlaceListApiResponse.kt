@@ -13,12 +13,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class MapPlaceListApiResponse(
-    val response: List<MapPlaceListResponse>
-)
-
-@Serializable
-data class MapApiResponse(
-    val response: MapResponse?
+    val response: List<MapPlaceListResponse>,
 )
 
 @Serializable
@@ -33,6 +28,7 @@ data class MapPlaceListResponse(
     val nameJp: String?,
     val transcriptionJp: String?,
     val timeStep: Long,
+    val placeDetailImage: String?,
     val description: List<PlaceDescriptionResponse>,
     val personages: List<PersonageForPlaceResponse>,
     val inventory: List<InventoryResponse>,
@@ -52,6 +48,7 @@ data class MapResponse(
     val nameJp: String?,
     val transcriptionJp: String?,
     val timeStep: Long,
+    val placeDetailImage: String?,
     val band: List<BandResponse>,
     val bandDescription: List<BandDescriptionResponse>,
     val bandPersonage: List<BandPersonageResponse>,
@@ -66,5 +63,5 @@ data class MapResponse(
     val placeDescription: List<PlaceDescriptionResponse>,
     val placeItem: List<PlaceItemResponse>,
     val placeTransit: List<PlaceTransitItemResponse>,
-    val ship: List<ShipResponse>
+    val ship: List<ShipResponse>,
 )

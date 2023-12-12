@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.bond.BondResponse
 import org.jetbrains.exposed.sql.Table
 
-object BondTable: Table(name = "bond") {
+object BondTable : Table(name = "bond") {
     val id = integer("id")
     val personageId = integer("personage_id").references(PersonageTable.id)
     val mangaId = integer("manga_id").references(MangaTable.id)
@@ -18,7 +18,7 @@ data class BondDTO(
     val mangaId: Int,
     val bondPersonageId: Int,
     val description: String?,
-    val bondType: String?
+    val bondType: String?,
 )
 
 fun BondDTO.toResponse() = BondResponse(

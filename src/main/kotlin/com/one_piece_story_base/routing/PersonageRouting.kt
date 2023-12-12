@@ -9,7 +9,6 @@ import org.koin.ktor.ext.inject
 
 fun Application.configurePersonageRouting() {
     val personage by inject<PersonageController>()
-
     routing {
         get("/personage") {
             call.respond(status = HttpStatusCode.OK, personage.getPersonage())
@@ -45,7 +44,8 @@ fun Application.configurePersonageRouting() {
             val id = call.request.queryParameters["id"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
-            val personageDescription = id?.toInt()?.let { placeId -> personage.getPersonageDescriptionByPlaceId(placeId) }
+            val personageDescription =
+                id?.toInt()?.let { placeId -> personage.getPersonageDescriptionByPlaceId(placeId) }
             if (personageDescription == null)
                 call.respond(status = HttpStatusCode.NotFound, "Personage not found")
             else

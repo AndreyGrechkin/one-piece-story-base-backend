@@ -9,7 +9,6 @@ import org.koin.ktor.ext.inject
 
 fun Application.configureRewardRouting() {
     val reward by inject<RewardController>()
-
     routing {
         get("/reward") {
             call.respond(status = HttpStatusCode.OK, reward.getAllReward())

@@ -12,5 +12,5 @@ data class PersonageForPlaceResponse(
     val transcriptionJp: String?,
     val avatar: String?,
     val image: String?,
-    val fruit: String?
+    val fruit: String?,
 )

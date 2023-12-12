@@ -9,9 +9,7 @@ import org.koin.ktor.ext.inject
 
 fun Application.configurePlaceRouting() {
     val place by inject<PlaceController>()
-
     routing {
-
         get("/place") {
             val id = call.request.queryParameters["id"]
             if (id.isNullOrEmpty())

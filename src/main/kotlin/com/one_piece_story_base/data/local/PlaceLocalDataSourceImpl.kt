@@ -26,7 +26,8 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                             nameIsland = place[PlaceTable.nameIsland],
                             nameJp = place[PlaceTable.nameJp],
                             transcriptionJp = place[PlaceTable.transcriptionJp],
-                            timeStep = place[PlaceTable.timeStep]
+                            timeStep = place[PlaceTable.timeStep],
+                            placeDetailImage = if (place[PlaceTable.placeDetailImage] != null) BaseUrl + "static/place/detail/${place[PlaceTable.placeDetailImage]}" else null
                         )
                     }
             }
@@ -94,7 +95,8 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                     nameIsland = place[PlaceTable.nameIsland],
                     nameJp = place[PlaceTable.nameJp],
                     transcriptionJp = place[PlaceTable.transcriptionJp],
-                    timeStep = place[PlaceTable.timeStep]
+                    timeStep = place[PlaceTable.timeStep],
+                    placeDetailImage = if (place[PlaceTable.placeDetailImage] != null) BaseUrl + "static/place/detail/${place[PlaceTable.placeDetailImage]}" else null
                 )
             }
         } catch (e: Throwable) {
@@ -116,7 +118,9 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                             nameJp = it[PlaceItemTable.nameJp],
                             transcriptionJp = it[PlaceItemTable.transcriptionJp],
                             description = it[PlaceItemTable.description],
-                            image = if (it[PlaceItemTable.image] != null) BaseUrl + "static/place/item/${it[PlaceItemTable.image]}" else null
+                            image = if (it[PlaceItemTable.image] != null) BaseUrl + "static/place/item/${it[PlaceItemTable.image]}" else null,
+                            posX = it[PlaceItemTable.posX],
+                            posY = it[PlaceItemTable.posY]
                         )
                     }
             }
@@ -139,7 +143,9 @@ class PlaceLocalDataSourceImpl : PlaceLocalDataSource {
                             nameJp = it[PlaceItemTable.nameJp],
                             transcriptionJp = it[PlaceItemTable.transcriptionJp],
                             description = it[PlaceItemTable.description],
-                            image = if (it[PlaceItemTable.image] != null) BaseUrl + "static/place/item/${it[PlaceItemTable.image]}" else null
+                            image = if (it[PlaceItemTable.image] != null) BaseUrl + "static/place/item/${it[PlaceItemTable.image]}" else null,
+                            posX = it[PlaceItemTable.posX],
+                            posY = it[PlaceItemTable.posY]
                         )
                     }
             }

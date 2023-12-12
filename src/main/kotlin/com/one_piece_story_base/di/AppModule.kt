@@ -6,7 +6,6 @@ import com.one_piece_story_base.database.DatabaseFactoryImpl
 import com.one_piece_story_base.domain.controller.*
 import com.one_piece_story_base.domain.local.*
 import com.one_piece_story_base.routing.repository.*
-import org.koin.core.scope.get
 import org.koin.dsl.module
 
 val appModule = module {
@@ -28,7 +27,7 @@ val appModule = module {
     single<ShipLocalDataSource> { ShipLocalDataSourceImpl() }
     single<ShipController> { ShipControllerImpl(get()) }
     single<IslandLocalDataSource> { IslandLocalDataSourceImpl() }
-    single<IslandController> {IslandControllerImpl(get()) }
+    single<IslandController> { IslandControllerImpl(get()) }
     single<PlaceLocalDataSource> { PlaceLocalDataSourceImpl() }
     single<PlaceController> {
         PlaceControllerImpl(

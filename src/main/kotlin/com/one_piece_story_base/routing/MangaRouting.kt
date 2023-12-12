@@ -7,10 +7,8 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
-
 fun Application.configureMangaRouting() {
     val manga by inject<MangaController>()
-
     routing {
         get("/manga") {
             call.respond(status = HttpStatusCode.OK, manga.getMangaAll())

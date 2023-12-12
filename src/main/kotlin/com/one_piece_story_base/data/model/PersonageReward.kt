@@ -3,7 +3,7 @@ package com.one_piece_story_base.data.model
 import com.one_piece_story_base.domain.model.personage.PersonageRewardResponse
 import org.jetbrains.exposed.sql.Table
 
-object PersonageRewardTable: Table(name = "personage_reward") {
+object PersonageRewardTable : Table(name = "personage_reward") {
     val id = integer("id")
     val personageId = integer("personage_id").references(PersonageTable.id)
     val mangaId = integer("manga_id").references(MangaTable.id)
@@ -20,7 +20,7 @@ data class PersonageRewardDTO(
     val reward: Int,
     val rewardType: String,
     val image: String?,
-    val placeId: Int
+    val placeId: Int,
 )
 
 fun PersonageRewardDTO.toResponse() = PersonageRewardResponse(

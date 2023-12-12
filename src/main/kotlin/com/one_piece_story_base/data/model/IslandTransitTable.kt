@@ -16,7 +16,7 @@ data class IslandTransitDTO(
     val avatarId: Int,
     val placeId: Int,
     val posX: Double,
-    val posY: Double
+    val posY: Double,
 )
 
 fun IslandTransitDTO.toResponse() = IslandTransitResponseBody(
