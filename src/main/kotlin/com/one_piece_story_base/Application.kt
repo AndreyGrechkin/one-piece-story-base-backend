@@ -44,4 +44,5 @@ fun Application.module() {
 
 //const val BaseUrl = "http://127.0.0.1:8080/"
 //const val BaseUrl = "http://10.0.2.2:8080/"
-const val BaseUrl = "http://192.168.1.59:8080/"
+//const val BaseUrl = "http://192.168.1.59:8080/"
+const val BaseUrl = "https://one-piece-backend.onrender.com/"
