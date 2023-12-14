@@ -76,4 +76,3 @@ bin/
 hs_err_pid*.log
 
 gradle-user-home
-/src/main/resources/static/
