@@ -36,7 +36,7 @@ fun Application.configureBandRouting() {
             val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
-            val bandPlace = id?.toInt()?.let { placeId -> band.getBandDescriptionByPlace(placeId) }
+            val bandPlace = id?.toInt()?.let { placeId -> band.getBandPersonageByPlace(placeId) }
             if (bandPlace == null)
                 call.respond(status = HttpStatusCode.NotFound, "Band not found")
             else
