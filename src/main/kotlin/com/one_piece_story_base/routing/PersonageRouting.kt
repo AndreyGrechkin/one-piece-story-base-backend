@@ -19,7 +19,7 @@ fun Application.configurePersonageRouting() {
         }
 
         get("/personage/place/list") {
-            val id = call.request.queryParameters["id"]
+            val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
             val personageMap = id?.toInt()?.let { placeId -> personage.getPersonageListByPlaceId(placeId) }
@@ -30,7 +30,7 @@ fun Application.configurePersonageRouting() {
         }
 
         get("/personage/place") {
-            val id = call.request.queryParameters["id"]
+            val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
             val personageMap = id?.toInt()?.let { placeId -> personage.getPersonageByPlaceId(placeId) }
@@ -41,7 +41,7 @@ fun Application.configurePersonageRouting() {
         }
 
         get("/personage_description/place") {
-            val id = call.request.queryParameters["id"]
+            val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
             val personageDescription =
@@ -53,7 +53,7 @@ fun Application.configurePersonageRouting() {
         }
 
         get("/personage_skill/place") {
-            val id = call.request.queryParameters["id"]
+            val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
             val personageSkill = id?.toInt()?.let { placeId -> personage.getSkillByPlaceId(placeId) }
@@ -64,7 +64,7 @@ fun Application.configurePersonageRouting() {
         }
 
         get("/personage_weapon/place") {
-            val id = call.request.queryParameters["id"]
+            val id = call.request.queryParameters["placeId"]
             if (id.isNullOrEmpty())
                 call.respond(status = HttpStatusCode.BadRequest, "Not query parameter")
             val personageWeapon = id?.toInt()?.let { placeId -> personage.getWeaponByPlaceId(placeId) }
