@@ -8,7 +8,7 @@ object MangaTable : Table(name = "manga") {
     val volume = varchar("volume", length = 40).nullable()
     val chapter = varchar("chapter", length = 40).nullable()
     val animeType = varchar("anime_type", length = 40).nullable()
-    val animeSeries = varchar("anime_series", length = 40).nullable()
+    val animeSeries = varchar("anime_series", length = 60).nullable()
     val description = text("description").nullable()
     val placeId = integer("place_id")
 }
